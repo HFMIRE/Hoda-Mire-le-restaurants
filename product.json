@@ -1,0 +1,138 @@
+[
+    {
+       "name": "Chips",
+       "description": "Fried Patotoes Chip",
+        "dietary": ["vegetarian", "Halal", "Vegan"], 
+        "price": 5, 
+        "allergies": ["oil", "nuts", "milk"], 
+        "type": "Side",
+        "image":"http://localhost:3000/assets/1.png"
+    }, {
+        "name": "Fish n rice ",
+        "description": "A Fried salmon with a bed of zucchini couscous",
+         "dietary": ["pescatarian",  "Halal"], 
+         "price": 15, 
+         "allergies": ["oil", "nuts", "egg" ], 
+         "type": "Main",
+         "image":"http://localhost:3000/assets/2.png"
+     }, 
+     {
+        "name": "Naked dumpling Tofu ",
+        "description": "A deconstructed Dumpling with a hearty soup",
+         "dietary": ["vegetarian", "Halal", "Vegan"], 
+         "price": 3, 
+         "allergies": [ "nuts", "egg" ], 
+         "type": "Side",
+         "image":"http://localhost:3000/assets/2.png"
+     }, 
+     {
+        "name": "Deconstructed Eton Mess",
+        "description": "A deconstructed Eton Mess with a delicious strawberry",
+         "dietary": ["vegetarian", "Halal"], 
+         "price": 4, 
+         "allergies": [ "nuts", "egg", "mlik" ], 
+         "type": "Dessert",
+         "image":"http://localhost:3000/assets/5.png"
+     }, 
+     {
+        "name": "Margherita Pizza",
+        "description": "A simple pizza made with love and cheese and tomatoes",
+         "dietary": ["vegetarian", "Halal"], 
+         "price": 8, 
+         "allergies": [ "nuts", "egg", "cheese" ], 
+         "type": "Main",
+         "image":"http://localhost:3000/assets/6.png"
+     },
+     {
+        "name": "Blueberry Pancake stack",
+        "description": "A layered stack of blueberry pancakes",
+         "dietary": ["vegetarian", "Halal"], 
+         "price": 6, 
+         "allergies": [ "nuts", "egg", "milk" ], 
+         "type": "Dessert",
+         "image":"http://localhost:3000/assets/9.png"
+     }, 
+     {
+        "name": "A Stick of Onion Ring",
+        "description": "A stick of onion rings",
+         "dietary": ["vegetarian", "Halal"], 
+         "price": 2, 
+         "allergies": [ "nuts", "egg", "milk" ], 
+         "type": "Side",
+         "image":"http://localhost:3000/assets/9s.png"
+     }, 
+      {
+            "name": "Ice Cream Muffin",
+            "description": "A vanilla with strawberry muffin",
+             "dietary": ["vegetarian", "Halal"], 
+             "price": 4, 
+             "allergies": [ "egg", "milk" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9a.png"
+         }, {
+            "name": "A Stack of Doughnuts",
+            "description": "A spinkle chocolate covered ring doughnuts",
+             "dietary": ["vegetarian", "Halal"], 
+             "price": 4, 
+             "allergies": [ "egg", "milk" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9r.png"
+         }, {
+            "name": "Chocolate Trifle",
+            "description": "A trifle made with pretty layers of fudgy box brownies, creamy chocolate pudding, and fluffy whipped topping served chilled to perfection.",
+             "dietary": ["vegetarian", "Halal"], 
+             "price": 4, 
+             "allergies": [ "egg", "milk", "nuts" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9h.png"
+         }, {
+            "name": "Chicken MeetBalls",
+            "description": "A meatball served with salad",
+             "dietary": ["Halal"], 
+             "price": 11, 
+             "allergies": [  "nuts" ], 
+             "type": "Main",
+             "image":"http://localhost:3000/assets/9i.png"
+         }, 
+    
+         {
+            "name": "Rasberry Trifle",
+            "description": "A trifle made with pretty layers of vanilla cake , creamy raspberry pudding, and fluffy whipped topping served chilled to perfection.",
+             "dietary": ["Halal"], 
+             "price": 6, 
+             "allergies": [  "nuts", "milk", "egg" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9f.png"
+         }, 
+         {
+            "name": "Rasberry waffle",
+            "description": "A waffle made with  creamy raspberry sauce, and fluffy whipped topping served chilled to perfection.",
+             "dietary": ["Halal"], 
+             "price": 7, 
+             "allergies": [  "nuts", "milk", "egg" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9k.png"
+         }, 
+         {
+            "name": "Deconstructed Brownie",
+            "description": "A deconstructed brownie with a carmel syrup",
+             "dietary": ["Halal"], 
+             "price": 7, 
+             "allergies": [  "nuts", "milk", "egg" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9q.png"
+         }, 
+
+         {
+            "name": "Banana and Blueberry French Toast",
+            "description": "A Banana and Blueberry French Toast with golden syrup",
+             "dietary": ["Halal"], 
+             "price": 7, 
+             "allergies": [  "nuts", "milk", "egg" ], 
+             "type": "Dessert",
+             "image":"http://localhost:3000/assets/9p.png"
+         }
+
+
+
+]
