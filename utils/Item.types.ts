@@ -1,5 +1,5 @@
 import { Document, Model } from "mongoose";
-export interface Item {
+export interface ItemInterface {
   name: String;
   description: String;
   dietary: String;
@@ -8,5 +8,3 @@ export interface Item {
   type: String;
   image: String;
 }
-export interface ItemDocument extends Item, Document {}
-export interface ItemDrModel extends Model<ItemDocument> {}

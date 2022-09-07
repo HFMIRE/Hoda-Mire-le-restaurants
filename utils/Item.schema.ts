@@ -1,6 +1,7 @@
 import { Schema } from "mongoose";
+import { ItemInterface } from "./Item.types";
 
-const ItemSchema = new Schema({
+const ItemSchema = new Schema<ItemInterface>({
   name: String,
   description: String,
   dietary: String,
