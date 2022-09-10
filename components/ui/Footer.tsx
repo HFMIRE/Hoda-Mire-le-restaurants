@@ -30,7 +30,7 @@ interface SocialButtonProps {
 const SocialButton = ({ children, label, href }: SocialButtonProps) => {
   return (
     <chakra.button
-      bg={useColorModeValue("orange.900", "whiteAlpha.100")}
+      bg={useColorModeValue("brand.150", "whiteAlpha.100")}
       rounded={"full"}
       w={8}
       h={8}
@@ -42,7 +42,7 @@ const SocialButton = ({ children, label, href }: SocialButtonProps) => {
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("orange.200", "whiteAlpha.200"),
+        bg: useColorModeValue("brand.200", "whiteAlpha.200"),
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -54,13 +54,13 @@ const SocialButton = ({ children, label, href }: SocialButtonProps) => {
 export default function LargeWithAppLinksAndSocial() {
   return (
     <Box
-      bg={useColorModeValue("black.50", "orange.50.900")}
-      color={useColorModeValue("orange.100", "orange.50.200")}
+      bg={useColorModeValue("brand.100", "orange.50")}
+      color={useColorModeValue("brand.700", "brand.900")}
     >
       <Container as={Stack} maxW={"6xl"} py={10} mb={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
-            <ListHeader>Les Restaurant Membership</ListHeader>
+            <ListHeader>Le Restaurant Membership</ListHeader>
             <NextLink href={"#"}>Find a store</NextLink>
             <NextLink href={"#"}>Student Discount</NextLink>
             <NextLink href={"#"}>Promo Code</NextLink>
@@ -68,7 +68,7 @@ export default function LargeWithAppLinksAndSocial() {
           </Stack>
 
           <Stack align={"flex-start"}>
-            <ListHeader>Les Restaurant</ListHeader>
+            <ListHeader>Le Restaurant</ListHeader>
             <NextLink href={"#"}>About Us</NextLink>
             <NextLink href={"#"}>Sustainability</NextLink>
             <NextLink href={"#"}>News</NextLink>
@@ -95,7 +95,7 @@ export default function LargeWithAppLinksAndSocial() {
           justify={{ md: "space-between" }}
           align={{ md: "center" }}
         >
-          <Text>© 2022 Les Restaurant. All rights reserved</Text>
+          <Text>© 2022 Le Restaurant. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />

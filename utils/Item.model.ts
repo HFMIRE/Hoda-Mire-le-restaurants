@@ -1,6 +1,6 @@
 import { model } from "mongoose";
 import mongoose from "mongoose";
-import { ItemInterface } from "./Item.types";
+import { ItemInterface } from "./Item.schema";
 import ItemSchema from "./Item.schema";
 
 module.exports =

@@ -6,7 +6,7 @@
         "price": 5, 
         "allergies": ["oil", "nuts", "milk"], 
         "type": "Side",
-        "image":"http://localhost:3000/assets/1.png"
+        "image":"http://localhost:3000/assets/1.jpg"
     }, {
         "name": "Fish n rice ",
         "description": "A Fried salmon with a bed of zucchini couscous",
@@ -14,7 +14,7 @@
          "price": 15, 
          "allergies": ["oil", "nuts", "egg" ], 
          "type": "Main",
-         "image":"http://localhost:3000/assets/2.png"
+         "image":"http://localhost:3000/assets/3.jpg"
      }, 
      {
         "name": "Naked dumpling Tofu ",
@@ -23,7 +23,7 @@
          "price": 3, 
          "allergies": [ "nuts", "egg" ], 
          "type": "Side",
-         "image":"http://localhost:3000/assets/2.png"
+         "image":"http://localhost:3000/assets/2.jpg"
      }, 
      {
         "name": "Deconstructed Eton Mess",
@@ -32,7 +32,7 @@
          "price": 4, 
          "allergies": [ "nuts", "egg", "mlik" ], 
          "type": "Dessert",
-         "image":"http://localhost:3000/assets/5.png"
+         "image":"http://localhost:3000/assets/5.jpg"
      }, 
      {
         "name": "Margherita Pizza",
@@ -41,7 +41,7 @@
          "price": 8, 
          "allergies": [ "nuts", "egg", "cheese" ], 
          "type": "Main",
-         "image":"http://localhost:3000/assets/6.png"
+         "image":"http://localhost:3000/assets/6.jpg"
      },
      {
         "name": "Blueberry Pancake stack",
@@ -50,7 +50,7 @@
          "price": 6, 
          "allergies": [ "nuts", "egg", "milk" ], 
          "type": "Dessert",
-         "image":"http://localhost:3000/assets/9.png"
+         "image":"http://localhost:3000/assets/9.jpg"
      }, 
      {
         "name": "A Stick of Onion Ring",
@@ -59,7 +59,7 @@
          "price": 2, 
          "allergies": [ "nuts", "egg", "milk" ], 
          "type": "Side",
-         "image":"http://localhost:3000/assets/9s.png"
+         "image":"http://localhost:3000/assets/9s.jpg"
      }, 
       {
             "name": "Ice Cream Muffin",
@@ -68,7 +68,7 @@
              "price": 4, 
              "allergies": [ "egg", "milk" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9a.png"
+             "image":"http://localhost:3000/assets/9a.jpg"
          }, {
             "name": "A Stack of Doughnuts",
             "description": "A spinkle chocolate covered ring doughnuts",
@@ -76,7 +76,7 @@
              "price": 4, 
              "allergies": [ "egg", "milk" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9r.png"
+             "image":"http://localhost:3000/assets/9r.jpg"
          }, {
             "name": "Chocolate Trifle",
             "description": "A trifle made with pretty layers of fudgy box brownies, creamy chocolate pudding, and fluffy whipped topping served chilled to perfection.",
@@ -84,7 +84,7 @@
              "price": 4, 
              "allergies": [ "egg", "milk", "nuts" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9h.png"
+             "image":"http://localhost:3000/assets/9h.jpg"
          }, {
             "name": "Chicken MeetBalls",
             "description": "A meatball served with salad",
@@ -92,7 +92,7 @@
              "price": 11, 
              "allergies": [  "nuts" ], 
              "type": "Main",
-             "image":"http://localhost:3000/assets/9i.png"
+             "image":"http://localhost:3000/assets/9i.jpg"
          }, 
     
          {
@@ -102,7 +102,7 @@
              "price": 6, 
              "allergies": [  "nuts", "milk", "egg" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9f.png"
+             "image":"http://localhost:3000/assets/9f.jpg"
          }, 
          {
             "name": "Rasberry waffle",
@@ -111,7 +111,7 @@
              "price": 7, 
              "allergies": [  "nuts", "milk", "egg" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9k.png"
+             "image":"http://localhost:3000/assets/9k.jpg"
          }, 
          {
             "name": "Deconstructed Brownie",
@@ -120,7 +120,7 @@
              "price": 7, 
              "allergies": [  "nuts", "milk", "egg" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9q.png"
+             "image":"http://localhost:3000/assets/9q.jpg"
          }, 
 
          {
@@ -130,7 +130,7 @@
              "price": 7, 
              "allergies": [  "nuts", "milk", "egg" ], 
              "type": "Dessert",
-             "image":"http://localhost:3000/assets/9p.png"
+             "image":"http://localhost:3000/assets/9p.jpg"
          }
 
 

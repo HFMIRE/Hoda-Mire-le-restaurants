@@ -1,10 +1,16 @@
 import { Schema } from "mongoose";
-import { ItemInterface } from "./Item.types";
+export interface ItemInterface {
+  name: string;
+  description: string;
+  price: number;
+  allergies: [string];
+  type: string;
+  image: string;
+}
 
 const ItemSchema = new Schema<ItemInterface>({
   name: String,
   description: String,
-  dietary: String,
   price: Number,
   allergies: [String],
   type: String,

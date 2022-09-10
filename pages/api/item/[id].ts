@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../utils/dbConnect";
 import Item from "../../../utils/Item.model";
@@ -9,14 +8,13 @@ type Data = {
 
 const ItemData = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   await dbConnect();
-
+  const { id } = req.query;
+  console.log("id", id);
   try {
-    const itemData = await Item.find({}).exec();
-    res.status(200).json({ success: true, data: itemData });
+    const itemData = await Item.find({ _id: id }).exec();
+    res.status(200).json({ success: true, data: itemData[0] });
   } catch (err) {
-    res.status(400).json({
-      success: false,
-    });
+    res.status(400).json({ success: false });
   }
 };
 
