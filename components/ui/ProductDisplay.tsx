@@ -18,7 +18,7 @@ import AccordionComp from "./AccordionComp";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
-import { ItemData } from "../../interface.model";
+import { ItemData } from "../../types/interface.model";
 
 const ProductDisplay = ({ data }: ItemData) => {
   console.log("Data", data);
@@ -38,9 +38,7 @@ const ProductDisplay = ({ data }: ItemData) => {
           </NextLink>
           <Breadcrumb color={"brand.500"}>
             <BreadcrumbItem>
-              <NextLink href="menu">
-                <BreadcrumbLink color={"brand.200"}>Products</BreadcrumbLink>
-              </NextLink>
+              <BreadcrumbLink color={"brand.200"}>Products</BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem isCurrentPage>

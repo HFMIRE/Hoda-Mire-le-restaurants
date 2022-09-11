@@ -4,7 +4,7 @@ import fetcher from "../libs/fetcher";
 import useSWR from "swr";
 import type { NextPage } from "next";
 import AlertMsg from "../components/ui/AlertMsg";
-import { ItemProp } from "../interface.model";
+import { ItemProp } from "../types/interface.model";
 const URL = "http://localhost:3000/api/order";
 const Order: NextPage = () => {
   let { data: order, error } = useSWR(URL, fetcher);

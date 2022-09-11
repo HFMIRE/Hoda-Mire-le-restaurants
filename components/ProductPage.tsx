@@ -1,5 +1,5 @@
 import { Container } from "@chakra-ui/react";
-import { ProductPageProp } from "../interface.model";
+import { ProductPageProp } from "../types/interface.model";
 
 import AlertMsg from "./ui/AlertMsg";
 import ProductDisplay from "./ui/ProductDisplay";

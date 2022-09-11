@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 
 import AccessDenied from "../components/access-denied";
+import Layout from "../components/Layout";
 
 export default function Page() {
   const { data: session, status } = useSession();

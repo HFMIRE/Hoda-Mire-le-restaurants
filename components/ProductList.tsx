@@ -1,6 +1,6 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import Card from "../components/ui/Card";
-import { ItemProp, MenuProp, ItemMapProp } from "../interface.model";
+import { ItemProp, MenuProp, ItemMapProp } from "../types/interface.model";
 const ProductList = ({ menu }: MenuProp) => {
   return (
     <Box>

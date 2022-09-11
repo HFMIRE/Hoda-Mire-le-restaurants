@@ -7,7 +7,7 @@ import {
   Box,
   VStack,
 } from "@chakra-ui/react";
-import { AdditionalInfoProps } from "../../interface.model";
+import { AdditionalInfoProps } from "../../types/interface.model";
 const AccordionComp = ({ allergies }: AdditionalInfoProps) => {
   return (
     <Box p={4}>

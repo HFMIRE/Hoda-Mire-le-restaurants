@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   Heading,
 } from "@chakra-ui/react";
-import { OrderProp } from "../interface.model";
+import { OrderProp } from "../types/interface.model";
 import { CartProductMeta } from "./ui/CartProductMeta";
 
 const OrderInfomation = ({ orderItem }: any) => {

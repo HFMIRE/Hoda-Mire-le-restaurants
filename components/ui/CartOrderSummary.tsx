@@ -53,17 +53,17 @@ export const CartOrderSummary = () => {
     },
   };
 
-  const getTableNumber = () => {
-    const tableNumber = JSON.parse(localStorage.getItem("tableNumber") || "");
+  // const getTableNumber = () => {
+  //   const tableNumber = JSON.parse(localStorage.getItem("tableNumber") || "");
 
-    if (!tableNumber) return undefined;
-    return tableNumber.tableNumber;
-  };
-  console.log(getTableNumber());
+  //   if (!tableNumber) return undefined;
+  //   return tableNumber.tableNumber;
+  // };
+  // console.log(getTableNumber());
   const orderdata = {
     items: cartItem,
     orderTotal: getTotalPrice(),
-    tableNumber: getTableNumber(),
+    tableNumber: "getTableNumber()",
     userId: "Hoda",
   };
 
