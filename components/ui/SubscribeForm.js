@@ -51,7 +51,7 @@ export const SubscribeForm = () => {
           size="lg"
           p={5}
         >
-          Let's order
+          {/* Let's order */}
         </Button>
       </Stack>
     </form>

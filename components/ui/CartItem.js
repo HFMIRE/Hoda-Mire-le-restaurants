@@ -7,7 +7,6 @@ import {
   decrementQuantity,
   removeFromCart,
 } from "../../redux/cart.slice";
-import { CartItem } from "../../types/interface.model";
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
