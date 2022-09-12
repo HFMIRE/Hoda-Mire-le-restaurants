@@ -5,11 +5,9 @@ import {
   cartReducer,
 } from "../redux/cart.slice";
 describe("counter reducer", () => {
-  const initialState = {
-    qty: 3,
-  };
+  const initialState = [];
   it("should handle initial state", () => {
-    expect(cartReducer(undefined, { type: "unknown" })).toEqual({
+    expect(cartReducer(undefined)).toEqual({
       qty: 0,
     });
   });
