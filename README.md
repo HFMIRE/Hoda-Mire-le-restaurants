@@ -12,16 +12,56 @@ React-Hook-Form
 Design:
 
 I have designed through figma buiding wireframe and UI.
+Here access to my figma via `https://www.figma.com/file/WwYNubn1K0lPY1Osd4Omp7/Les-restaurant?node-id=0%3A1`
 
 ## Screenshots
 
-![Figma Le Restaurant](http://localhost:3000/assets/13.png)
-![Figma Le Restaurant](http://localhost:3000/assets/14.png)
-![Figma Le Restaurant](http://localhost:3000/assets/15.png)
-![Figma Le Restaurant](http://localhost:3000/assets/16.png)
-![Figma Le Restaurant](http://localhost:3000/assets/17.png)
+<img src="./assets/13.png " width="900" />
+<img src="./assets/14.png " width="900" />
+<img src="./assets/15.png " width="900" />
+<img src="./assets/16.png " width="900" />
+<img src="./assets/17.png " width="900" />
 
 ## UML
 
 Here is the uml
-![UML](http://localhost:3000/assets/17.png)
+
+```
+@startuml Restaurants
+
+entity User {
+     id,
+  name,
+  image,
+  email,
+}
+entity Item {
+      id,
+  name,
+  description,
+  price,
+  allergies,
+  type,
+  image,
+}
+
+
+entity Order {
+    id
+     items: [
+    {
+      itemId: String,
+      qty: Number,
+    },
+  ],
+  orderTotal
+  tableNumbe
+  userId
+}
+
+Orders::user_id -- User::id
+Orders::orders_id -- Order::id
+Order::order_id -- Item::id
+
+@enduml
+```
