@@ -10,6 +10,20 @@
 - Axios
 - React-Hook-Form
 
+# Run the app
+
+To run the local version
+
+```
+yarn run dev
+```
+
+To vist the deploy
+
+```
+https://hoda-mire-le-restaurants.vercel.app/
+```
+
 # Design:
 
 I have designed through figma buiding wireframe and UI.
@@ -30,39 +44,37 @@ Here is the uml
 <img src="public/assets/19.png" width="200" height="500" />
 
 ```
+
 @startuml Restaurants
 
 entity User {
-     id,
-  name,
-  image,
-  email,
+id,
+name,
+image,
+email,
 }
 entity Item {
-      id,
-  name,
-  description,
-  price,
-  allergies,
-  type,
-  image,
+id,
+name,
+description,
+price,
+allergies,
+type,
+image,
 }
-
 
 entity Order {
-    id
-     items: [
-    {
-      itemId: String,
-      qty: Number,
-    },
-  ],
-  orderTotal
-  tableNumbe
-  userId
+id
+items: [
+{
+itemId: String,
+qty: Number,
+},
+],
+orderTotal
+tableNumbe
+userId
 }
-
-
 
 User::id -- Order::id
 Order::order_id -- Item::id
@@ -78,3 +90,4 @@ Testing using Postman and Jest and cypress
 <img src="public/assets/20.png" width="900" />
 <img src="public/assets/21.png" width="900" />
 <img src="public/assets/22.png" width="900" />
+```
