@@ -60,9 +60,11 @@ entity Order {
   userId
 }
 
-Orders::user_id -- User::id
-Orders::orders_id -- Order::id
+
+
+User::id -- Order::id
 Order::order_id -- Item::id
 
 @enduml
+
 ```

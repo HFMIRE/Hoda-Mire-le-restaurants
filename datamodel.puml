@@ -1,16 +1,13 @@
+@startuml Restaurants
 
-@startuml Restaurants 
-
-
-
-entity User { 
+entity User {
      id,
   name,
   image,
   email,
 }
 entity Item {
-      id, 
+      id,
   name,
   description,
   price,
@@ -33,8 +30,9 @@ entity Order {
   userId
 }
 
-Orders::user_id -- User::id
-Orders::orders_id -- Order::id
+
+
+User::id -- Order::id
 Order::order_id -- Item::id
 
 @enduml
