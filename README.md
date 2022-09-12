@@ -17,10 +17,10 @@ Here access to my figma via `https://www.figma.com/file/WwYNubn1K0lPY1Osd4Omp7/L
 ## Screenshots
 
 <img src="public/assets/13.png" width="900" />
-<img src="http://localhost:3000/assets/14.png" width="900" />
-<img src="http://localhost:3000/assets/15.png" width="900" />
-<img src="http://localhost:3000/assets/16.png" width="900" />
-<img src="http://localhost:3000/assets/17.png" width="900" />
+<img src="public/assets/14.png" width="900" />
+<img src="public/assets/15.png" width="900" />
+<img src="public/assets/16.png" width="900" />
+<img src="public/assets/17.png" width="900" />
 
 ## UML
 
