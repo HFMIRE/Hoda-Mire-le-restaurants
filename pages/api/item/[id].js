@@ -4,7 +4,7 @@ import Item from "../../../utils/Item.model";
 const ItemData = async (req, res) => {
   await dbConnect();
   const { id } = req.query;
-  console.log("id", id);
+
   try {
     const itemData = await Item.find({ _id: id }).exec();
     res.status(200).json({ success: true, data: itemData[0] });

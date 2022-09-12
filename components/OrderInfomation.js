@@ -35,9 +35,7 @@ const OrderInfomation = ({ orderItem }) => {
               orderItem
                 ?.filter(({ userId }) => userId === session?.user.id)
                 .map((item) => {
-                  console.log("dd", item);
                   return item.items?.map((el, idx) => {
-                    console.log("item", el);
                     return (
                       <NextLink key={idx} href={`menu/${el._id._id}`} passHref>
                         <LinkBox

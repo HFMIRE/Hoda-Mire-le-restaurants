@@ -8,7 +8,6 @@ const UserApi = async (req, res) => {
   switch (method) {
     case "GET":
       const { id } = req.query;
-      console.log("id", id);
       try {
         // this gets all of user
         const Users = await User.find({ _id: id }).exec();
@@ -20,7 +19,6 @@ const UserApi = async (req, res) => {
     case "POST":
       try {
         // add new user
-        console.log("req.body", req.body);
         const newUser = await User.create(req.body);
         console.log("created a user");
         res.status(200).json({ success: true });

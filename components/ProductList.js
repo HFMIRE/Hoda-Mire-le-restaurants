@@ -13,7 +13,6 @@ const ProductList = ({ menu }) => {
       >
         {menu &&
           menu?.map((item, idx) => {
-            console.log("item", item);
             return <Card item={item} key={idx} />;
           })}
       </SimpleGrid>

@@ -12,7 +12,6 @@ export default function Product() {
 
   const { data: menu, error } = useSWR(URL, fetcher);
   const { data } = menu || [];
-  console.log("data", data);
 
   return (
     <Box>

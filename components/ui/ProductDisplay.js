@@ -19,7 +19,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
 
 const ProductDisplay = ({ data }) => {
-  console.log("Data", data);
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [size, setSize] = useState();

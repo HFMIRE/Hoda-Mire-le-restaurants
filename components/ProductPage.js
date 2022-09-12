@@ -4,7 +4,6 @@ import AlertMsg from "./ui/AlertMsg";
 import ProductDisplay from "./ui/ProductDisplay";
 
 export default function ProductPage({ data, error }) {
-  console.log("Product Listing data", data);
   if (error) {
     <AlertMsg />;
   }

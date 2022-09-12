@@ -1,18 +1,19 @@
 # Welcome to My synoptic project :wave:
 
-Tech Stack:
-NextJS
-Chakra UI
-Redux
-Cypress
-Jest
-Axios
-React-Hook-Form
+## Tech Stack:
+
+- NextJS
+- Chakra UI
+- Redux
+- Cypress
+- Jest
+- Axios
+- React-Hook-Form
 
 # Design:
 
 I have designed through figma buiding wireframe and UI.
-Here access to my figma via `https://www.figma.com/file/WwYNubn1K0lPY1Osd4Omp7/Les-restaurant?node-id=0%3A1`
+Here access to my figma via <a>`https://www.figma.com/file/WwYNubn1K0lPY1Osd4Omp7/Les-restaurant?node-id=0%3A1`</a>
 
 ## Screenshots
 
