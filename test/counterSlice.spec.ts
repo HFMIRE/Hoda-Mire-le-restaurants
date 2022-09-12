@@ -1,34 +1,31 @@
-import counterReducer, {
-  CounterState,
-  increment,
-  decrement,
-  incrementByAmount,
-} from './counterSlice';
-
-describe('counter reducer', () => {
-  const initialState: CounterState = {
-    value: 3,
-    status: 'idle',
+import {
+  addToCart,
+  incrementQuantity,
+  decrementQuantity,
+  cartReducer,
+} from "../redux/cart.slice";
+describe("counter reducer", () => {
+  const initialState = {
+    qty: 3,
   };
-  it('should handle initial state', () => {
-    expect(counterReducer(undefined, { type: 'unknown' })).toEqual({
-      value: 0,
-      status: 'idle',
+  it("should handle initial state", () => {
+    expect(cartReducer(undefined, { type: "unknown" })).toEqual({
+      qty: 0,
     });
   });
 
-  it('should handle increment', () => {
-    const actual = counterReducer(initialState, increment());
-    expect(actual.value).toEqual(4);
+  it("should handle increment", () => {
+    const actual = cartReducer(initialState, addToCart());
+    expect(actual.qty).toEqual(4);
   });
 
-  it('should handle decrement', () => {
-    const actual = counterReducer(initialState, decrement());
-    expect(actual.value).toEqual(2);
+  it("should handle decrement", () => {
+    const actual = cartReducer(initialState, decrementQuantity());
+    expect(actual.qty).toEqual(2);
   });
 
-  it('should handle incrementByAmount', () => {
-    const actual = counterReducer(initialState, incrementByAmount(2));
-    expect(actual.value).toEqual(5);
+  it("should handle incrementByAmount", () => {
+    const actual = cartReducer(initialState, incrementQuantity(2));
+    expect(actual.qty).toEqual(5);
   });
 });

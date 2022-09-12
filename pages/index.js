@@ -6,10 +6,11 @@ import LoginPage from "../components/ui/Loginpage";
 
 const Home = () => {
   const { data: session, status } = useSession();
+
   return (
     <div>
       <Head>
-        <title>Sign in</title>
+        <title data-testid="sign-in">Sign in</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

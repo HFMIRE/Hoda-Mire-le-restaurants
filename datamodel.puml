@@ -1,0 +1,40 @@
+
+@startuml Restaurants 
+
+
+
+entity User { 
+     id,
+  name,
+  image,
+  email,
+}
+entity Item {
+      id, 
+  name,
+  description,
+  price,
+  allergies,
+  type,
+  image,
+}
+
+
+entity Order {
+    id
+     items: [
+    {
+      itemId: String,
+      qty: Number,
+    },
+  ],
+  orderTotal
+  tableNumbe
+  userId
+}
+
+Orders::user_id -- User::id
+Orders::orders_id -- Order::id
+Order::order_id -- Item::id
+
+@enduml

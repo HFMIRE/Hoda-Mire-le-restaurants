@@ -1,6 +1,7 @@
-import { unstable_getServerSession } from "next-auth/next";
+import { getSession } from "next-auth/client";
+
 export default async (req, res) => {
-  const session = await unstable_getServerSession({ req });
+  const session = await getSession({ req });
 
   if (session) {
     res.send({
