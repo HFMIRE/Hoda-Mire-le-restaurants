@@ -24,6 +24,21 @@ To vist the deploy
 https://hoda-mire-le-restaurants.vercel.app/
 ```
 
+run jest test
+
+```
+yarn run test
+```
+
+run cypress
+
+```
+yarn test:e2e:open
+yarn test:e2e:run
+```
+
+yarn
+
 # Design:
 
 I have designed through figma buiding wireframe and UI.
