@@ -16,11 +16,11 @@ Here access to my figma via `https://www.figma.com/file/WwYNubn1K0lPY1Osd4Omp7/L
 
 ## Screenshots
 
-<img src="./assets/13.png " width="900" />
-<img src="./assets/14.png " width="900" />
-<img src="./assets/15.png " width="900" />
-<img src="./assets/16.png " width="900" />
-<img src="./assets/17.png " width="900" />
+<img src="http://localhost:3000/assets/13.png " width="900" />
+<img src="http://localhost:3000/assets/14.png " width="900" />
+<img src="http://localhost:3000/assets/15.png " width="900" />
+<img src="http://localhost:3000/assets/16.png " width="900" />
+<img src="http://localhost:3000/assets/17.png " width="900" />
 
 ## UML
 
