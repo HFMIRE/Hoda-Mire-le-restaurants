@@ -23,12 +23,18 @@ const OrderConfirmation = () => {
           </Text>
           <Flex direction="column" align="center" flex="1" p={5}>
             <NextLink href="/" passHref>
-              <Link color={"brand.250"}>Go back to homepage</Link>
+              <Link color={"brand.250"} fontSize={{ base: "md", md: "lg" }}>
+                {" "}
+                Go back to homepage
+              </Link>
             </NextLink>
             <HStack fontWeight="semibold">
+              <br />
               <p>or</p>
               <NextLink href="/menu" passHref>
-                <Link color={"brand.500"}>Browse the Menu</Link>
+                <Link fontSize={{ base: "md", md: "lg" }} color={"brand.500"}>
+                  Browse the Menu
+                </Link>
               </NextLink>
             </HStack>
           </Flex>

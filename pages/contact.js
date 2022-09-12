@@ -51,7 +51,7 @@ export default function Contact() {
               <WrapItem>
                 <Box>
                   <Heading>Contact</Heading>
-                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="brand.900">
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="brand.100">
                     Fill up the form below to contact
                   </Text>
                   <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>

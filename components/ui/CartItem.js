@@ -35,7 +35,7 @@ const CartItem = ({ item }) => {
           >
             +
           </Button>
-          <Text p={5} color={"brand.200"}>
+          <Text p={5} color={"brand.900"}>
             {item.quantity}
           </Text>
           <Button
