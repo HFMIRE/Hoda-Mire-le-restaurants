@@ -131,20 +131,14 @@ export default function Contact() {
                       <FormControl id="name">
                         <FormLabel>Your Name</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<BsPerson color="gray.800" />}
-                          />
+                          <InputLeftElement pointerEvents="none" />
                           <Input type="text" size="md" />
                         </InputGroup>
                       </FormControl>
                       <FormControl id="name">
                         <FormLabel>Mail</FormLabel>
                         <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
+                          <InputLeftElement pointerEvents="none" />
                           <Input type="text" size="md" />
                         </InputGroup>
                       </FormControl>

@@ -39,7 +39,7 @@ const OrderInfomation = ({ orderItem }) => {
                   return item.items?.map((el, idx) => {
                     console.log("item", el);
                     return (
-                      <NextLink href={`menu/${el._id._id}`} passHref>
+                      <NextLink key={idx} href={`menu/${el._id._id}`} passHref>
                         <LinkBox
                           role={"group"}
                           p={6}

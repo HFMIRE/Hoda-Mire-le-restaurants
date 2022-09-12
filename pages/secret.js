@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 
 export default function Secret() {
   const [session, loading] = useSession();
@@ -22,9 +22,7 @@ export default function Secret() {
   if (!session) {
     return (
       <main>
-        <div>
-          <h1>You aren't signed in, please sign in first</h1>
-        </div>
+        <h1>You arent signed in, please sign in first</h1>
       </main>
     );
   }
