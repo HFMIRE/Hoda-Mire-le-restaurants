@@ -17,6 +17,7 @@ import NextLink from "next/link";
 const HeroComp = () => {
   return (
     <Box
+      minH={"80vh"}
       maxW="7xl"
       mx="auto"
       px={{ base: "0", lg: "12" }}

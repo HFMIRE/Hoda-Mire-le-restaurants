@@ -1,37 +1,41 @@
 import NextAuth from "next-auth";
-import Auth0Provider from "next-auth/providers/auth0";
-import FacebookProvider from "next-auth/providers/facebook";
-import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import EmailProvider from "next-auth/providers/email";
 import TwitterProvider from "next-auth/providers/twitter";
-// import EmailProvider from "next-auth/providers/email"
-// import AppleProvider from "next-auth/providers/apple"
+import Auth0Provider from "next-auth/providers/auth0";
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+import dbConnect from "../../../utils/dbConnect";
+import clientPromise from "../../../utils/mongodb";
 
-// For more information on each option (and a full list of options) go to
-// https://next-auth.js.org/configuration/options
-export default NextAuth({
-  // https://next-auth.js.org/configuration/providers
+const options = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
+    EmailProvider({
+      server: {
+        host: process.env.EMAIL_SERVER_HOST,
+        port: process.env.EMAIL_SERVER_PORT,
+        auth: {
+          user: process.env.EMAIL_SERVER_USER,
+          pass: process.env.EMAIL_SERVER_PASSWORD,
+        },
+      },
+    }),
   ],
-  secret: process.env.SECRET,
 
-  session: {
-    strategy: "jwt",
+  callbacks: {
+    session({ session, user }) {
+      if (session.user) {
+        session.user.id = user.id;
+      }
+      return session;
+    },
   },
+};
 
-  jwt: {
-    secret: process.env.SECRET,
-  },
-
-  pages: {},
-
-  callbacks: {},
-
-  events: {},
-
-  debug: false,
+export default NextAuth({
+  ...options,
+  adapter: MongoDBAdapter(clientPromise),
 });

@@ -9,6 +9,7 @@ const OrderApi = async (req, res) => {
     case "GET":
       try {
         // this gets all of menu
+
         const orders = await Order.find({}).populate({
           path: "items",
           populate: {

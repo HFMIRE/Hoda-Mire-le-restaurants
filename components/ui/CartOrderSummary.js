@@ -4,16 +4,23 @@ import {
   Heading,
   Stack,
   Text,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import axios from "axios";
 import NextLink from "next/link";
 import { useDispatch } from "react-redux";
-
+import { useSession } from "next-auth/react";
 import { removeAllFromCart } from "../../redux/cart.slice";
 import { FaArrowRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
+import { useRouter } from "next/router";
 const OrderSummaryItem = (props) => {
   const { label, value, children } = props;
   return (
@@ -27,8 +34,15 @@ const OrderSummaryItem = (props) => {
 };
 
 export const CartOrderSummary = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
+  const { data: session } = useSession();
   const cart = useSelector((state) => state.cart);
+  const [input, setInput] = useState("");
+
+  const handleInputChange = (e) => setInput(e.target.value);
+
+  const isError = input === "";
   const getTotalPrice = () => {
     return cart.reduce(
       (accumulator, item) => accumulator + item.quantity * item.price,
@@ -49,26 +63,23 @@ export const CartOrderSummary = () => {
     },
   };
 
-  // const getTableNumber = () => {
-  //   const tableNumber = JSON.parse(localStorage.getItem("tableNumber") || "");
-
-  //   if (!tableNumber) return undefined;
-  //   return tableNumber.tableNumber;
-  // };
-  // console.log(getTableNumber());
   const orderdata = {
     items: cartItem,
     orderTotal: getTotalPrice(),
-    tableNumber: "getTableNumber()",
-    userId: "Hoda",
+    tableNumber: input,
+    userId: session?.user.id,
   };
 
   function PostOrder() {
-    axios
-      .post("http://localhost:3000/api/order", orderdata, config)
-      .then((response) => {
-        console.log(response);
-      });
+    if (input) {
+      axios
+        .post("http://localhost:3000/api/order", orderdata, config)
+        .then((response) => {
+          console.log("res", response);
+        });
+      dispatch(removeAllFromCart());
+      router.push("/confirm");
+    }
   }
 
   return (
@@ -80,6 +91,22 @@ export const CartOrderSummary = () => {
       width="full"
       color={"brand.500"}
     >
+      <FormControl>
+        <FormLabel>Table Number</FormLabel>
+        <Input
+          isRequired
+          type="table-number"
+          value={input}
+          onChange={handleInputChange}
+        />
+        {!isError ? (
+          <FormHelperText>
+            Enter the table so that you can order at the table
+          </FormHelperText>
+        ) : (
+          <FormErrorMessage>Table number is required.</FormErrorMessage>
+        )}
+      </FormControl>
       <Heading color={"brand.900"} size="md">
         Order Summary
       </Heading>
@@ -101,17 +128,29 @@ export const CartOrderSummary = () => {
           </Text>
         </Flex>
       </Stack>
-      <NextLink href={"/order"}>
+
+      {input.length >= 1 ? (
         <Button
           colorScheme="teal"
           size="lg"
           fontSize="md"
           rightIcon={<FaArrowRight />}
-          onClick={() => dispatch(removeAllFromCart()) && PostOrder}
+          onClick={() => PostOrder()}
         >
           Checkout
         </Button>
-      </NextLink>
+      ) : (
+        <Button
+          colorScheme="teal"
+          size="lg"
+          fontSize="md"
+          rightIcon={<FaArrowRight />}
+          onClick={() => PostOrder()}
+          isDisabled
+        >
+          Checkout
+        </Button>
+      )}
     </Stack>
   );
 };

@@ -13,12 +13,14 @@ import {
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import CartItem from "./ui/CartItem";
+import { signIn, signOut, useSession } from "next-auth/react";
 import NextLink from "next/link";
 import { CartOrderSummary } from "./ui/CartOrderSummary";
 import { useSelector } from "react-redux";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
-
+import LoginPage from "./ui/Loginpage";
 const CartLayout = () => {
+  const { data: session, status } = useSession();
   const [cartItemValue, setCartitemValue] = useState();
   const cart = useSelector((state) => state.cart);
 
@@ -29,8 +31,11 @@ const CartLayout = () => {
     );
     setCartitemValue(val);
   }, [cart]);
+  if (!session) return <LoginPage />;
+
   return (
     <Box
+      minH={"40vh"}
       maxW={{ base: "3xl", lg: "7xl" }}
       mx="auto"
       px={{ base: "4", md: "8", lg: "12" }}
@@ -38,7 +43,7 @@ const CartLayout = () => {
       color={"brand.900"}
     >
       {cart.length === 0 ? (
-        <>
+        <Box>
           <HStack>
             <NextLink href="/menu">
               <ChevronLeftIcon w={6} h={6} color="brand.200" />
@@ -60,7 +65,7 @@ const CartLayout = () => {
               </Link>
             </NextLink>
           </HStack>
-        </>
+        </Box>
       ) : (
         <Stack
           direction={{ base: "column", lg: "row" }}

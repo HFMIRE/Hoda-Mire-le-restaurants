@@ -14,13 +14,12 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuDivider,
   MenuList,
 } from "@chakra-ui/react";
 import { HiMenu } from "react-icons/hi";
+import { saveState } from "../../redux/browser-storage";
 
 import NextLink from "next/link";
-
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
@@ -30,7 +29,6 @@ const NavBar = () => {
   const { data: session, status } = useSession();
   const loading = status === "loading";
   const isDesktop = useBreakpointValue({ base: false, md: true, lg: true });
-  // const isDesktop = useBreakpointValue({ base: false, lg: true });
   const [cartItemValue, setCartitemValue] = useState();
   const cart = useSelector((state) => state.cart);
 
@@ -41,9 +39,9 @@ const NavBar = () => {
     );
     setCartitemValue(val);
   }, [cart]);
-  console.log("user", session?.user);
+
   return (
-    <Box as="section" pb={{ base: "12", md: "24" }}>
+    <Box as="section" pb={{ base: "12", md: "15" }}>
       <Box
         as="nav"
         bg="bg-surface"
@@ -63,17 +61,19 @@ const NavBar = () => {
             {isDesktop ? (
               <Flex justify="space-between" flex="1" gap={10}>
                 <ButtonGroup variant="link" spacing="8">
-                  {["menu", "cart", "contact"].map((item, idx) => (
-                    // <NextLink href={item} passHref>
-                    <Button key={idx}>{item}</Button>
-                    // </NextLink>
+                  {["menu", "book", "contact"].map((item, idx) => (
+                    <>
+                      <NextLink href={item} key={idx} passHref>
+                        <Button key={idx}>{item}</Button>
+                      </NextLink>
+                    </>
                   ))}
                 </ButtonGroup>
                 <br />
                 <HStack spacing="3" p={3} gap={5}>
                   {!session && (
                     <Button
-                      onClick={() => signIn("google")}
+                      onClick={() => signIn() && saveState()}
                       colorScheme={"orange"}
                     >
                       Sign in
@@ -90,24 +90,23 @@ const NavBar = () => {
                             cursor={"pointer"}
                             minW={0}
                           >
-                            <Avatar
-                              size={"sm"}
-                              src={
-                                "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-                              }
-                            />
+                            <Avatar size={"sm"} src={session?.user.image} />
                           </MenuButton>
                           <MenuList>
-                            <MenuItem>Profile</MenuItem>
-                            <MenuItem>Order</MenuItem>
+                            <NextLink href="/profile" passHref>
+                              <MenuItem>Profile</MenuItem>
+                            </NextLink>
+                            <NextLink href="/order" passHref>
+                              <MenuItem>Order</MenuItem>
+                            </NextLink>
                           </MenuList>
                         </Menu>
                       </Flex>
-                      <NextLink href="/api/auth/signout" passHref>
-                        <Button colorScheme={"teal"} onClick={() => signOut()}>
-                          Sign out
-                        </Button>
-                      </NextLink>
+                      {/* <NextLink href="/api/auth/signout" passHref> */}
+                      <Button colorScheme={"teal"} onClick={() => signOut()}>
+                        Sign out
+                      </Button>
+                      {/* </NextLink> */}
                     </>
                   )}
 

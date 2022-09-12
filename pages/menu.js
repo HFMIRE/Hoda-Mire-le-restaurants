@@ -5,11 +5,7 @@ import useSWR from "swr";
 
 const URL = "http://localhost:3000/api/item";
 const Menu = () => {
-  let { data, error } = useSWR(
-    URL,
-    fetcher
-    // { fallbackData }
-  );
+  let { data, error } = useSWR(URL, fetcher);
 
   if (error) {
     <AlertMsg />;
@@ -18,7 +14,6 @@ const Menu = () => {
     <div>Loading....</div>;
   }
 
-  console.log("menu", data);
   return data && <ProductList menu={data.data} />;
 };
 export default Menu;
