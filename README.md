@@ -25,7 +25,7 @@ Here access to my figma via `https://www.figma.com/file/WwYNubn1K0lPY1Osd4Omp7/L
 ## UML
 
 Here is the uml
-<img src="public/assets/19.png" width="900" height="500" />
+<img src="public/assets/19.png" width="500" height="500" />
 
 ```
 @startuml Restaurants
